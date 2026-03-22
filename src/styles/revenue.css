@@ -1,0 +1,68 @@
+/* ===== REVENUE SECTION ===== */
+.revenue-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.revenue-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.revenue-stat-card:hover {
+  border-color: rgba(245,166,35,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.revenue-stat-card--highlight {
+  border-color: var(--gold-primary);
+  background: linear-gradient(160deg, rgba(245,166,35,0.07) 0%, var(--bg-card) 60%);
+  box-shadow: 0 0 20px rgba(245,166,35,0.1);
+}
+
+.rev-year {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--white-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.rev-value {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 0.25rem;
+}
+
+.rev-label {
+  font-size: 0.85rem;
+  color: var(--white-muted);
+  margin-bottom: 0.5rem;
+}
+
+.rev-margin {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-teal);
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 212, 170, 0.08);
+  border-radius: 50px;
+  display: inline-block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .revenue-stats {
+    grid-template-columns: 1fr;
+  }
+}

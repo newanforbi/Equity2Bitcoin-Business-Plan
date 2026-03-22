@@ -1,0 +1,108 @@
+/* ===== FINANCIALS SECTION ===== */
+.financials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+}
+
+.fin-margins,
+.fin-donut,
+.fin-breakeven,
+.fin-sensitivity {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+/* Progress bars */
+.progress-bar-wrap {
+  margin-bottom: 1.25rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--white-dim);
+  margin-bottom: 0.5rem;
+}
+
+.progress-pct {
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+.progress-track {
+  height: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-primary), var(--gold-light));
+  border-radius: 50px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Donut */
+.fin-donut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fin-donut canvas {
+  margin: 0 auto;
+}
+
+/* Break-even card */
+.fin-breakeven {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-color: var(--border-subtle);
+}
+
+.breakeven-card {
+  padding: 1rem;
+}
+
+.breakeven-num {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(245,166,35,0.4);
+}
+
+.breakeven-label {
+  font-size: 1.1rem;
+  color: var(--white-dim);
+  margin-bottom: 0.75rem;
+}
+
+.breakeven-detail {
+  font-size: 0.82rem;
+  color: var(--white-muted);
+}
+
+/* Sensitivity table */
+.base-row td {
+  background: rgba(245,166,35,0.04);
+  color: var(--white) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .financials-grid {
+    grid-template-columns: 1fr;
+  }
+}

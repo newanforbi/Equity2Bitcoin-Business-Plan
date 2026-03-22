@@ -1,0 +1,89 @@
+/* ===== HALVING SECTION ===== */
+#halving .chart-container {
+  margin-bottom: 3rem;
+}
+
+/* Cycle cards */
+.cycle-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.cycle-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.cycle-card:hover {
+  border-color: rgba(245,166,35,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.cycle-card--current {
+  border-color: var(--gold-primary);
+  background: linear-gradient(135deg, #161616, rgba(245,166,35,0.05));
+  box-shadow: 0 0 20px rgba(245,166,35,0.1);
+}
+
+.cycle-num {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--white-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.cycle-year {
+  font-size: 0.875rem;
+  color: var(--white-muted);
+  margin-bottom: 0.75rem;
+}
+
+.cycle-gain {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+}
+
+.cycle-note {
+  font-size: 0.8rem;
+  color: var(--white-muted);
+}
+
+.cycle-badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold-primary);
+  color: #0a0a0a;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.75rem;
+  border-radius: 50px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .cycle-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cycle-cards {
+    grid-template-columns: 1fr;
+  }
+}

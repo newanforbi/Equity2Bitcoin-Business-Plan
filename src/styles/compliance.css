@@ -1,0 +1,139 @@
+/* ===== COMPLIANCE SECTION ===== */
+.compliance-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Shield + Orbit */
+.shield-orbit-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.orbit-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shield-svg {
+  width: 120px;
+  height: 140px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 20px rgba(245,166,35,0.3));
+}
+
+/* Orbit badges — positioned via CSS transforms */
+.orbit-badge {
+  position: absolute;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--gold-primary);
+  background: rgba(245,166,35,0.1);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  text-align: center;
+  line-height: 1.3;
+  white-space: nowrap;
+  animation: orbit 30s linear infinite;
+  transform-origin: center center;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  margin-left: -50px;
+  margin-top: -24px;
+}
+
+.orbit-badge--1 { animation-delay: 0s; }
+.orbit-badge--2 { animation-delay: -5s; }
+.orbit-badge--3 { animation-delay: -10s; }
+.orbit-badge--4 { animation-delay: -15s; }
+.orbit-badge--5 { animation-delay: -20s; }
+.orbit-badge--6 { animation-delay: -25s; }
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(140px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(140px) rotate(-360deg);
+  }
+}
+
+/* Risk Grid */
+.risk-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.risk-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.risk-card:hover {
+  border-color: var(--border-subtle);
+  transform: translateY(-2px);
+}
+
+.risk-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.risk-status--green {
+  background: rgba(0, 200, 100, 0.12);
+  color: #00c864;
+}
+
+.risk-status--teal {
+  background: rgba(0, 212, 170, 0.12);
+  color: var(--accent-teal);
+}
+
+.risk-status--gold {
+  background: rgba(245, 166, 35, 0.12);
+  color: var(--gold-primary);
+}
+
+.risk-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .compliance-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .orbit-container {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .risk-grid {
+    grid-template-columns: 1fr;
+  }
+}
