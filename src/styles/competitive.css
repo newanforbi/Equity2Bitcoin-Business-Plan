@@ -51,6 +51,14 @@
   font-weight: 500;
 }
 
+.comp-table td small {
+  display: block;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.3);
+  font-weight: 400;
+  margin-top: 0.15rem;
+}
+
 .comp-row--us td {
   background: rgba(245,166,35,0.04);
 }

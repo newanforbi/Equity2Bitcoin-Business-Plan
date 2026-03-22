@@ -1,8 +1,8 @@
 /* ===== REVENUE SECTION ===== */
 .revenue-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
   margin-top: 2rem;
 }
 
@@ -61,7 +61,13 @@
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
+  .revenue-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
   .revenue-stats {
     grid-template-columns: 1fr;
   }
