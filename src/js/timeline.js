@@ -2,13 +2,16 @@
  * Alternating slide-in animation for roadmap timeline nodes
  */
 export function initTimeline() {
-  const nodes = document.querySelectorAll('.timeline-node')
+  const nodes = Array.from(document.querySelectorAll('.timeline-node'))
   if (!nodes.length) return
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
+          const i = nodes.indexOf(entry.target)
+          const delay = Math.min(i * 120, 400)
+          entry.target.style.setProperty('--node-delay', `${delay}ms`)
           entry.target.classList.add('revealed')
           observer.unobserve(entry.target)
         }
@@ -20,12 +23,5 @@ export function initTimeline() {
     }
   )
 
-  nodes.forEach((node, i) => {
-    // Stagger via CSS transition-delay set inline
-    const content = node.querySelector('.timeline-content')
-    if (content) {
-      content.style.transitionDelay = `${i * 100}ms`
-    }
-    observer.observe(node)
-  })
+  nodes.forEach(node => observer.observe(node))
 }

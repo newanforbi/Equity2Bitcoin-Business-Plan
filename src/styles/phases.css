@@ -1,4 +1,24 @@
 /* ===== PHASES SECTION ===== */
+.phases-flow-wrap {
+  position: relative;
+}
+
+.phases-flow-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0.5rem;
+  width: 60px;
+  background: linear-gradient(to right, transparent, var(--bg-primary));
+  pointer-events: none;
+  border-radius: 0 12px 12px 0;
+}
+
+@media (min-width: 1025px) {
+  .phases-flow-wrap::after { display: none; }
+}
+
 .phases-flow {
   display: flex;
   align-items: stretch;
