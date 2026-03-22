@@ -13,6 +13,7 @@
 
   <!-- 00. Navbar -->
   <nav id="navbar">
+    <div id="scroll-progress"></div>
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Equity<span class="sub2">₂</span>Bitcoin</a>
       <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
@@ -27,6 +28,8 @@
         <li><a href="#treasury" class="nav-link">Treasury</a></li>
         <li><a href="#roadmap" class="nav-link">Roadmap</a></li>
         <li><a href="#financials" class="nav-link">Financials</a></li>
+        <li><a href="#marketing" class="nav-link">Growth</a></li>
+        <li><a href="#exit" class="nav-link">Exit</a></li>
       </ul>
       <a href="#cta" class="nav-cta">Get Started</a>
     </div>
@@ -76,7 +79,7 @@
         <p>Bitcoin's four-year halving cycle creates predictable supply shocks. Each cycle's peak has exceeded the prior peak — each cycle has been the foundation of Equity2Bitcoin's accumulation strategy.</p>
       </div>
       <div class="chart-container" data-reveal>
-        <canvas id="halving-chart" width="900" height="400"></canvas>
+        <canvas id="halving-chart" width="900" height="400" aria-label="Bitcoin price history log-scale chart with halving event markers" role="img"></canvas>
       </div>
       <div class="cycle-cards" data-reveal>
         <div class="cycle-card">
@@ -253,7 +256,7 @@
         <p>Revenue derives exclusively from milestone-based success fees — not Bitcoin performance. Non-performance fees triggered by verified loan approval, scaled by the 2024 halving cycle tailwind.</p>
       </div>
       <div class="chart-container chart-container--wide" data-reveal>
-        <canvas id="revenue-chart" width="900" height="450"></canvas>
+        <canvas id="revenue-chart" width="900" height="450" aria-label="Revenue and client growth projections 2026 to 2032 bar and line chart" role="img"></canvas>
       </div>
       <div class="revenue-stats" data-reveal>
         <div class="revenue-stat-card">
@@ -326,7 +329,7 @@
       </div>
       <div class="treasury-bottom" data-reveal>
         <div class="treasury-donut-wrap">
-          <canvas id="treasury-donut" width="300" height="300"></canvas>
+          <canvas id="treasury-donut" width="300" height="300" aria-label="2033 BTC treasury profit split doughnut chart" role="img"></canvas>
         </div>
         <div class="treasury-callout">
           <div class="callout-big">~$1 Billion+</div>
@@ -347,7 +350,7 @@
       </div>
       <div class="competitive-layout">
         <div class="radar-wrap" data-reveal>
-          <canvas id="competitor-radar" width="400" height="400"></canvas>
+          <canvas id="competitor-radar" width="400" height="400" aria-label="Competitive positioning radar chart comparing Equity2Bitcoin against competitors across 6 axes" role="img"></canvas>
         </div>
         <div class="comp-matrix-wrap" data-reveal>
           <table class="comp-table">
@@ -562,7 +565,7 @@
         </div>
         <div class="fin-donut" data-reveal>
           <h3>Cost Structure</h3>
-          <canvas id="cost-donut" width="260" height="260"></canvas>
+          <canvas id="cost-donut" width="260" height="260" aria-label="Operating cost structure breakdown doughnut chart" role="img"></canvas>
         </div>
         <div class="fin-breakeven" data-reveal>
           <h3>Break-Even Point</h3>
@@ -584,6 +587,209 @@
               <tr><td>Aggressive</td><td>50</td><td>$350K</td><td>$5.25M</td><td>Multi-state + high conversion</td></tr>
             </tbody>
           </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Marketing & Growth Strategy -->
+  <section id="marketing">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-eyebrow">MARKETING &amp; GROWTH</span>
+        <h2>How We Acquire Clients</h2>
+        <p>An education-first funnel: awaken homeowners, build trust, convert via milestone contract, then retain through an alumni network — guided by the mantra "Educate first, advise never, and empower always."</p>
+      </div>
+
+      <!-- 4-Stage Funnel -->
+      <div class="funnel-flow" data-reveal>
+        <div class="funnel-card">
+          <div class="funnel-num">01</div>
+          <div class="funnel-stage">ATTRACTION</div>
+          <div class="funnel-title">The Wake-Up Call</div>
+          <div class="funnel-tags">
+            <span class="funnel-tag">YouTube</span>
+            <span class="funnel-tag">Google Ads</span>
+            <span class="funnel-tag">Facebook / X</span>
+          </div>
+          <div class="funnel-desc">90-sec explainer videos linking inflation, equity &amp; Bitcoin. "Equity IQ Quiz" + free "2025 Equity Advantage Blueprint" download. Targets homeowners 35–60 with 5+ yr mortgage history.</div>
+        </div>
+        <div class="funnel-arrow">→</div>
+        <div class="funnel-card">
+          <div class="funnel-num">02</div>
+          <div class="funnel-stage">ENGAGEMENT</div>
+          <div class="funnel-title">The Education Bridge</div>
+          <div class="funnel-tags">
+            <span class="funnel-tag">Webinars</span>
+            <span class="funnel-tag">SEO Blog</span>
+            <span class="funnel-tag">Case Studies</span>
+          </div>
+          <div class="funnel-desc">Weekly webinars: "From Equity to Bitcoin: A Homeowner's Playbook." SEO-optimized articles on equity dynamics, compliance &amp; BTC thesis. Lead magnet: free Equity-to-Bitcoin Feasibility Report.</div>
+        </div>
+        <div class="funnel-arrow">→</div>
+        <div class="funnel-card funnel-card--primary">
+          <div class="funnel-num">03</div>
+          <div class="funnel-stage">CONVERSION</div>
+          <div class="funnel-title">The Milestone Fee Agreement</div>
+          <div class="funnel-tags">
+            <span class="funnel-tag">DocuSign</span>
+            <span class="funnel-tag">Milestone Map</span>
+            <span class="funnel-tag">30% Fee</span>
+          </div>
+          <div class="funnel-desc">Personalized milestone roadmap + transparent pricing proposal. Digital contract via DocuSign. Education-only compliance reaffirmed before payment. Consultative close — zero sales pressure.</div>
+        </div>
+        <div class="funnel-arrow">→</div>
+        <div class="funnel-card">
+          <div class="funnel-num">04</div>
+          <div class="funnel-stage">RETENTION</div>
+          <div class="funnel-title">The Alumni Network</div>
+          <div class="funnel-tags">
+            <span class="funnel-tag">Newsletter</span>
+            <span class="funnel-tag">Follow-ups</span>
+            <span class="funnel-tag">Referrals</span>
+          </div>
+          <div class="funnel-desc">Exclusive Bitcoin macro &amp; equity insight newsletters. Optional follow-up consultations for refinancing. Referral incentive program: fee credits for new client introductions.</div>
+        </div>
+      </div>
+
+      <!-- 6 Growth Channels -->
+      <h3 class="growth-title" data-reveal>6 Growth Channels</h3>
+      <div class="growth-channels" data-reveal>
+        <div class="channel-card">
+          <div class="channel-name">Content Marketing</div>
+          <div class="channel-desc">Blogs, guides, case studies, and videos. Builds trust and SEO authority.</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Email Automation</div>
+          <div class="channel-desc">5-step nurture series. Maintains engagement from lead to conversion.</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Social Media</div>
+          <div class="channel-desc">YouTube · X · LinkedIn · TikTok. Top-of-funnel awareness at scale.</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Partnership Marketing</div>
+          <div class="channel-desc">Mortgage professionals &amp; Bitcoin educators. Shared audience, no compliance risk.</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Speaking Engagements</div>
+          <div class="channel-desc">Real estate &amp; crypto conferences. Establishes domain thought leadership.</div>
+        </div>
+        <div class="channel-card">
+          <div class="channel-name">Affiliate Consultants</div>
+          <div class="channel-desc">Trained, certified Equity2Bitcoin advisors. Scales outreach nationally.</div>
+        </div>
+      </div>
+
+      <!-- KPI Chips -->
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-chip">
+          <span class="kpi-value">4–6%</span>
+          <span class="kpi-label">Website Conversion Rate</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value">&lt;$150</span>
+          <span class="kpi-label">Cost per Qualified Lead</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value">35%</span>
+          <span class="kpi-label">Close Rate per Consult</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value">9+/10</span>
+          <span class="kpi-label">Client Satisfaction Score</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value">20%+</span>
+          <span class="kpi-label">Organic Referral Rate</span>
+        </div>
+        <div class="kpi-chip">
+          <span class="kpi-value">10K+</span>
+          <span class="kpi-label">YouTube Subscribers (Yr 1)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. Exit Strategy & Long-Term Vision -->
+  <section id="exit">
+    <div class="section-inner">
+      <div class="section-header" data-reveal>
+        <span class="section-eyebrow">EXIT STRATEGY</span>
+        <h2>Exit Pathways &amp; Long-Term Vision</h2>
+        <p>Equity2Bitcoin is built with flexible exit options for founders and stakeholders — from strategic acquisition to IPO — while preserving the educational mission and brand authority.</p>
+      </div>
+
+      <!-- Vision Callout -->
+      <div class="exit-vision" data-reveal>
+        <p>"To become the leading educational and strategic advisory brand for homeowners seeking to convert trapped equity into sovereign digital assets — without intermediaries, custodians, or advisory entanglements."</p>
+      </div>
+
+      <!-- Exit Options Table -->
+      <div class="exit-table-wrap" data-reveal>
+        <table class="data-table exit-table">
+          <thead>
+            <tr><th>Exit Type</th><th>Description</th><th>Strategic Advantage</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="exit-tag exit-tag--green">Acquisition</span><br>FinTech or Crypto Firm</td>
+              <td>Sell the business to a larger firm seeking domain expertise in home equity and Bitcoin education</td>
+              <td>Immediate liquidity; validates market &amp; model</td>
+            </tr>
+            <tr>
+              <td><span class="exit-tag exit-tag--teal">Merger</span><br>Mortgage / Wealth Advisory</td>
+              <td>Combine with an established advisory or lender network to scale footprint and revenue</td>
+              <td>Retains brand influence; expands market access</td>
+            </tr>
+            <tr>
+              <td><span class="exit-tag exit-tag--gold">Licensing</span><br>Franchise Model</td>
+              <td>License proprietary education and milestone frameworks to independent consultants nationally</td>
+              <td>Recurring royalty income; low operational exposure</td>
+            </tr>
+            <tr>
+              <td><span class="exit-tag exit-tag--gold">PE Investment</span><br>Private Equity</td>
+              <td>Accept minority or majority investment for national expansion, retaining founder involvement</td>
+              <td>Capital for rollout without full divestiture</td>
+            </tr>
+            <tr>
+              <td><span class="exit-tag exit-tag--green">IPO</span><br>Public Offering (Long-Term)</td>
+              <td>Consider public offering once scalable, standardized, and nationally recognized</td>
+              <td>Maximum liquidity; positions company as industry leader</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 4-Phase Value Creation Path -->
+      <h3 class="vp-title" data-reveal>Strategic Value Creation Path</h3>
+      <div class="value-path" data-reveal>
+        <div class="vp-node">
+          <div class="vp-phase">Year 1</div>
+          <div class="vp-dot"></div>
+          <div class="vp-label">Pilot &amp; Validation</div>
+          <div class="vp-outcome">Proof of concept · Refined workflows · Testimonials</div>
+        </div>
+        <div class="vp-connector"></div>
+        <div class="vp-node">
+          <div class="vp-phase">Years 2–3</div>
+          <div class="vp-dot"></div>
+          <div class="vp-label">Regional Scale</div>
+          <div class="vp-outcome">10–15 states · 100+ clients · Multi-million revenue</div>
+        </div>
+        <div class="vp-connector"></div>
+        <div class="vp-node">
+          <div class="vp-phase">Years 3–5</div>
+          <div class="vp-dot"></div>
+          <div class="vp-label">National Scale &amp; Academy</div>
+          <div class="vp-outcome">250–500 clients · $25–50M+ revenue · Strong IP portfolio</div>
+        </div>
+        <div class="vp-connector"></div>
+        <div class="vp-node">
+          <div class="vp-phase">Years 5–10</div>
+          <div class="vp-dot"></div>
+          <div class="vp-label">Strategic Exit / Liquidity</div>
+          <div class="vp-outcome">Founder liquidity · Brand capitalization · Market leadership</div>
         </div>
       </div>
     </div>

@@ -6,6 +6,10 @@ export function initNav() {
   const navLinks = document.querySelectorAll('.nav-link')
   const hamburger = document.querySelector('.nav-hamburger')
   const navLinksContainer = document.querySelector('.nav-links')
+  const progressEl = document.getElementById('scroll-progress')
+
+  // Cache section list once
+  const sections = document.querySelectorAll('section[id]')
 
   // Scroll behavior — add .scrolled class after 50px
   function onScroll() {
@@ -14,12 +18,19 @@ export function initNav() {
     } else {
       navbar.classList.remove('scrolled')
     }
+
+    // Scroll progress bar
+    if (progressEl) {
+      const scrollable = document.body.scrollHeight - window.innerHeight
+      const scrolled = scrollable > 0 ? window.scrollY / scrollable : 0
+      progressEl.style.width = (scrolled * 100) + '%'
+    }
+
     updateActiveLink()
   }
 
   // Update active nav link based on scroll position
   function updateActiveLink() {
-    const sections = document.querySelectorAll('section[id]')
     const scrollPos = window.scrollY + 100
 
     let currentSection = ''
@@ -35,8 +46,10 @@ export function initNav() {
       const href = link.getAttribute('href').replace('#', '')
       if (href === currentSection) {
         link.classList.add('active')
+        link.setAttribute('aria-current', 'page')
       } else {
         link.classList.remove('active')
+        link.removeAttribute('aria-current')
       }
     })
   }
@@ -64,6 +77,17 @@ export function initNav() {
     })
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true })
+  // RAF-gated scroll throttle
+  let rafPending = false
+  window.addEventListener('scroll', () => {
+    if (!rafPending) {
+      rafPending = true
+      requestAnimationFrame(() => {
+        onScroll()
+        rafPending = false
+      })
+    }
+  }, { passive: true })
+
   onScroll()
 }

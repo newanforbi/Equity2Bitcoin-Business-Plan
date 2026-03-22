@@ -11,6 +11,8 @@ import '../styles/competitive.css'
 import '../styles/roadmap.css'
 import '../styles/compliance.css'
 import '../styles/financials.css'
+import '../styles/marketing.css'
+import '../styles/exit.css'
 import '../styles/cta.css'
 
 // JS modules
@@ -22,6 +24,7 @@ import { initMarketRings } from './marketRings.js'
 import { initTimeline } from './timeline.js'
 import { initFinancialBars } from './financialBars.js'
 import { initPhaseArrows } from './phaseArrows.js'
+import { initMarketingFunnel } from './marketingFunnel.js'
 
 document.addEventListener('DOMContentLoaded', () => {
   initNav()
@@ -32,4 +35,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTimeline()
   initFinancialBars()
   initPhaseArrows()
+  initMarketingFunnel()
 })

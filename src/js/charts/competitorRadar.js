@@ -74,8 +74,12 @@ export function createCompetitorRadar(canvasId) {
             font: { size: 11 },
           },
           ticks: {
-            display: false,
+            display: true,
             stepSize: 25,
+            color: 'rgba(255,255,255,0.2)',
+            font: { size: 9 },
+            backdropColor: 'transparent',
+            callback: (v) => v === 0 ? '' : v
           }
         }
       },

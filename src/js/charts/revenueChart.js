@@ -87,6 +87,12 @@ export function createRevenueChart(canvasId) {
           type: 'linear',
           position: 'right',
           grid: { drawOnChartArea: false },
+          title: {
+            display: true,
+            text: 'Clients',
+            color: 'rgba(255,255,255,0.3)',
+            font: { size: 10 }
+          },
           ticks: {
             color: 'rgba(255,255,255,0.4)',
             font: { size: 11 },
@@ -109,6 +115,16 @@ export function createRevenueChart(canvasId) {
           borderWidth: 1,
           titleColor: '#f5a623',
           bodyColor: 'rgba(255,255,255,0.8)',
+          callbacks: {
+            label(ctx) {
+              if (ctx.dataset.label === 'Client Count') {
+                return ` ${ctx.raw.toLocaleString()} clients`
+              }
+              const v = ctx.raw
+              const formatted = v >= 1000 ? `$${(v / 1000).toFixed(2)}B` : `$${v}M`
+              return ` ${ctx.dataset.label}: ${formatted}`
+            }
+          }
         }
       }
     }
