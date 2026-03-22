@@ -84,16 +84,19 @@
 }
 
 /* Slide-in animation classes */
-.timeline-node--left .timeline-content {
+.timeline-node--left .timeline-content,
+.timeline-node--right .timeline-content {
   opacity: 0;
+  transition: opacity 0.6s ease var(--node-delay, 0ms),
+              transform 0.6s ease var(--node-delay, 0ms);
+}
+
+.timeline-node--left .timeline-content {
   transform: translateX(-60px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .timeline-node--right .timeline-content {
-  opacity: 0;
   transform: translateX(60px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .timeline-node.revealed .timeline-content {

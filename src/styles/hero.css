@@ -156,6 +156,39 @@
   50%       { text-shadow: 0 0 80px rgba(245,166,35,0.8); }
 }
 
+/* ===== HERO TICKER ===== */
+.hero-ticker {
+  margin-top: 1.5rem;
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid rgba(245,166,35,0.1);
+  padding-top: 0.75rem;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: ticker 20s linear infinite;
+  width: max-content;
+}
+
+.ticker-track span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(245,166,35,0.5);
+}
+
+.ticker-track span[aria-hidden] {
+  color: rgba(255,255,255,0.15);
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .hero-inner {
