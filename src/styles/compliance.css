@@ -68,6 +68,10 @@
   }
 }
 
+.orbit-container:hover .orbit-badge {
+  animation-play-state: paused;
+}
+
 /* Risk Grid */
 .risk-grid {
   display: grid;

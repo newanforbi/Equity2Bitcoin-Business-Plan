@@ -239,6 +239,18 @@ section:nth-child(even) {
   background: rgba(245, 166, 35, 0.4);
 }
 
+/* ===== SCROLL PROGRESS BAR ===== */
+#scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--gold-primary);
+  transition: width 0.1s linear;
+  z-index: 10;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   :root {
@@ -251,5 +263,14 @@ section:nth-child(even) {
 
   .chart-container {
     padding: 1rem;
+  }
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
